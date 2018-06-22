@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+    <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Sudmant Lab Webpage">
@@ -17,28 +17,58 @@
 
   <body>
     <div id="header">
-	</div>
-
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-xl-12">
           <div class="text-left section_header">
            contact
           </div>
-          <div class="main_txt">
-				<p class="smalltxt">
-                <b>LAB ADDRESS</b><br>
-                    4111 Valley Life Sciences Bldg<br> 
-					Department of Integrative Biology<br>
-					Berkeley, CA 94720-3140<br>
-                <br>
-                <b>CONTACT</b><br>
-                    Peter Sudmant <br>
-                    sudmant[at]berkeley.edu
-				</p>
-           </div>
-          <div class="text-left main_txt">
-           </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                  <div class="main_txt">
+                        <p class="smalltxt">
+                        <b>LAB</b><br>
+                            4111 Valley Life Sciences MC3140<br> 
+                            Department of Integrative Biology<br>
+                            Berkeley, CA 94720-3140<br>
+                        <br>
+                        <b>OFFICE/MAILING</b><br>
+                            5002 Valley Life Sciences MC3140<br> 
+                            Department of Integrative Biology<br>
+                            Berkeley, CA 94720-3140<br>
+                        <br>
+                        <b>SHIPPING</b><br>
+                            163 LSA<br> 
+                            Berkeley, CA 94720-3140<br>
+                        <br>
+                        <b>CONTACT</b><br>
+                            Peter Sudmant <br>
+                            sudmant[at]berkeley.edu
+                        </p>
+                   </div>
+              </div>
+              <div class="col-8">
+					<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+					<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+					<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+					<div id='map'></div>
+					<script>
+					mapboxgl.accessToken = 'pk.eyJ1IjoicHN1ZG1hbnQiLCJhIjoiY2ppcHo2enRjMGkxNTNrbnhlMmk2bmhmZyJ9.KRkyT1VyCSWmOOnKl9I57A'; // replace this with your access token
+					var map = new mapboxgl.Map({
+					  container: 'map',
+					  style: 'mapbox://styles/psudmant/cjipyqngp0v262tlh963lg19k', // replace this with your style URL
+					  center: [-122.2624894,37.8714351],
+					  zoom: 15.7
+					});
+					</script>
+              </div>
+            </div>
+          </div>	
+
+
         </div>
       </div>
     </div>
