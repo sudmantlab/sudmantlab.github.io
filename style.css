@@ -16,12 +16,27 @@ body {
 
 .section_header {
   padding: .75rem;
-  line-hight: 2.2;
+  line-height: 1.2;
   font-size: 58px;
   color: black;
   font-weight: 100;
 }
 
+.section_sub_header {
+  padding: .75rem;
+  line-height: 2.2;
+  font-size: 25px;
+  color: black;
+  font-weight: 200;
+}
+
+.section_header_links a{
+  padding: .75rem;
+  line-height: 2.2;
+  font-size: 1.5rem;
+  color: grey;
+  font-weight: 200;
+}
 
 .berkeley_img{
 	height: 50px;
@@ -40,6 +55,12 @@ body {
 .main_txt {
   font-size: 16px;
   font-weight: 300;
+}
+
+.main_txt_indent_header {
+  font-size: 18px;
+  font-weight: 250;
+  padding: .75rem;
 }
 
 .smalltxt {
