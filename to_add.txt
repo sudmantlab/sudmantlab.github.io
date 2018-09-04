@@ -1,0 +1,9 @@
+add a news feed
+to the news feed add 
+    - Josh Joining the lab
+    - tweets?
+
+add a people tab
+    - put your info
+    - put josh's info
+
