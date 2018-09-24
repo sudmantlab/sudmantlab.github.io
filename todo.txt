@@ -1,10 +1,9 @@
 To Add:
 
-CV
-awards
-news / twitter
-diversity statement
-github links
-google scholar links
-Contact - map, phone email etc
+
+    - [ ] add more descriptive paragraphs to “research”
+    - [ ] add section on single cell genomics…
+    - [ ] add head shots
+    - [ ] news / twitter
+    - [ ] diversity statement
 
