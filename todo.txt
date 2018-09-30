@@ -3,7 +3,13 @@ To Add:
 
     - [ ] add more descriptive paragraphs to “research”
     - [ ] add section on single cell genomics…
-    - [ ] add head shots
+    - [x] add head shots
     - [ ] news / twitter
     - [ ] diversity statement
 
+news to add
+    - welcome Alma
+    - welcome Josh
+    - Welcome Ben
+
+    Job Postings...
