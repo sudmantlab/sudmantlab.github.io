@@ -72,6 +72,16 @@ body {
     object-position: center;
 }
 
+.top-buffer { 
+    margin-top:50px; 
+}
+
+.researchimg {
+    max-width: 200px;
+    max-height: 200px;
+    object-position: center;
+}
+
 .main_txt {
   font-size: 16px;
   font-weight: 300;
