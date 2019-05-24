@@ -66,6 +66,11 @@ body {
 .memberbox {
 }
 
+.labphoto {
+  display: block;
+  margin-left: auto;
+}
+
 .memberimg {
     height: 50%;
     width: 50%;
