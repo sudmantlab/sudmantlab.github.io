@@ -78,9 +78,15 @@ body {
 }
 
 .newsimg {
-    height: 100px;
+    max-height: 70px;
+    height:100%
     object-position: center;
 	float:center;
+}
+
+.newsrow {
+    max-height: 110px;
+    overflow:hidden;
 }
 
 .newsmedia {
