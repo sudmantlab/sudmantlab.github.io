@@ -77,6 +77,20 @@ body {
     object-position: center;
 }
 
+.newsimg {
+    height: 100px;
+    object-position: center;
+	float:center;
+}
+
+.newsmedia {
+    display: block
+    margin-left:auto;
+    margin-right:auto; 
+	float:center;
+}
+
+
 .top-buffer { 
     margin-top:50px; 
 }
