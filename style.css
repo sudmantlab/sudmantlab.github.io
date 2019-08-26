@@ -77,38 +77,24 @@ body {
     object-position: center;
 }
 
-.newsimg {
-    /*max-height: 70px;*/
-    /*height:100%*/
-    height:10%;
-    object-fit: cover;
-    /*object-position: center;*/
-	/*float:center;*/
-
-    /*
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%
-    */
-}
 
 .newsrow {
-    max-height: 110px;
-    overflow:hidden;
+    max-height: 200px;
+    overflow: hidden;
 }
 
 .newsmedia {
-    object-fit: contain;
-    display: block
-    margin-left:auto;
-    margin-right:auto; 
-	float:center;
+    height: 70px;
+    max-width: 800px;
+    min-width: 200px;
+    overflow: hidden;
 }
 
+.newsimg {
+    object-fit: contain;
+    width: auto;
+    height: 100%;
+}
 
 .top-buffer { 
     margin-top:50px; 
