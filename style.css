@@ -73,8 +73,7 @@ body {
 }
 
 .memberimg {
-    height: 50%;
-    width: 50%;
+    width: 200px;
     object-position: center;
 }
 
