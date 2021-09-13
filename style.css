@@ -63,6 +63,13 @@ body {
 	object-position: center;
 }
 
+.jumbo_labphoto{
+	background-image: url("resources/photos/2021/20210909_tree_LQ2.jpg");
+	background-size: cover;
+	height: 750px;
+	object-position: center;
+}
+
 .memberbox {
     padding: 10px 0 0 0
 }
