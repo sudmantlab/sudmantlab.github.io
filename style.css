@@ -149,6 +149,12 @@ body {
   font-size: 14px;
 }
 
+
+.table_just {
+    margin-left: auto; 
+    margin-right: 0;
+}
+
 .navbar-nav a {
   padding: .75rem;
   line-hight: 2.2;
