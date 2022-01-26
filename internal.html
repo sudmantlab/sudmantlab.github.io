@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <div id="tracker"></div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sudmant Lab Webpage">
+    <meta name="author" content="Peter Sudmant">
+    <link rel="icon" href="favicon.ico">
+    <title>The Sudmant Lab @ UC Berkeley</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="header">
+	</div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="text-left section_header">
+            internal 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="text-left section_header_links">
+            <a href="https://osf.io/x2p8k">wiki</a>
+            <a href="https://docs.google.com/spreadsheets/d/18L58hTSOKeZDO-8O2Bfdg-ZWmc9mQbMSh7KMzYtOzrI/edit#gid=0">lab meeting</a>
+            <a href="https://docs.google.com/spreadsheets/d/18L58hTSOKeZDO-8O2Bfdg-ZWmc9mQbMSh7KMzYtOzrI/edit#gid=0">lab jobs</a>
+          </div>
+        </div>
+      </div>
+
+
+      <template id="labmeeting_template">
+          <div class="row">
+            <div class="col-xl-4" id="COL1">
+                Sept 10
+            </div>
+            <div class="col-xl-8" id="COL2">
+                Peter  
+            </div>
+          </div>
+      </template>
+
+      <template id="labjob_template">
+          <div class="row">
+            <div class="col-xl-8" id="COL1" data-toggle="tooltip" title="blah">
+                CLEAN
+            </div>
+            <div class="col-xl-4" id="COL2">
+                Peter  
+            </div>
+          </div>
+      </template>
+
+
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="row">
+              <div class="section_sub_header">
+                <em>Lab Meeting Schedule</em>
+             </div>
+          </div>
+
+          <div id=labmeeting>
+          </div>
+
+        </div>
+
+        <div class="col-xl-6">
+          <div class="row">
+              <div class="section_sub_header">
+                <em>Lab Job Schedule</em>
+             </div>
+          </div>
+
+          <div id=labjobs>
+          </div>
+
+        </div>
+
+      </div>
+     
+
+    </div>
+   	
+    <div id="footer">
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="dist/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="parse_events.js"></script>
+    <script>
+        $(function(){
+          $("#tracker").load("tracker.html");
+          $("#header").load("header.html");
+          $("#footer").load("footer.html");
+        });
+    </script>
+  </body>
+</html>
