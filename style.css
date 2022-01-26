@@ -176,6 +176,12 @@ body {
 }
 
 
+.labjobrow:hover {
+    background-color: red;
+    color: white;
+    opacity: 0.5;
+}
+
 #map {
 position: absolute;
 top: 0;

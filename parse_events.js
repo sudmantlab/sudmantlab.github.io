@@ -55,6 +55,10 @@ function date_compare(r1,r2) {
   $(document).ready(function(){
 
 	function draw_labmeeting(labmeeting_array){ 
+
+        let d = new Date();
+        let event_date = new Date(labmeeting_array[0].Date);
+        let prev_event_date = new Date(labmeeting_array[0].Date);
 		
 		let main_div = document.getElementById("labmeeting");
 		for (let i = 0; i < labmeeting_array.length; i++){
@@ -63,6 +67,24 @@ function date_compare(r1,r2) {
 			let currdata = labmeeting_array[i];
             clon.getElementById("COL1").innerHTML=currdata.Date;
             clon.getElementById("COL2").innerHTML=currdata.Presenter;
+
+            event_date = new Date(labmeeting_array[i].Date);
+            event_date.setHours(22);
+            
+            if (i>0){
+                prev_event_date = new Date(labmeeting_array[i-1].Date);
+            }
+
+            if (d > event_date){
+                clon.getElementById("ROW").style.opacity="50%";
+            }
+
+            if ((d > prev_event_date) && (d<event_date)){
+                clon.getElementById("ROW").style.color="white";
+                clon.getElementById("ROW").style.background="red";
+                clon.getElementById("ROW").style.opacity="50%";
+            }
+
 		    main_div.appendChild(clon);
         }
     }
@@ -75,7 +97,7 @@ function date_compare(r1,r2) {
 			var clon = temp.content.cloneNode(true);
 			let currdata = labjobs_array[i];
             clon.getElementById("COL1").innerHTML=currdata.Job;
-            clon.getElementById("COL1").title=currdata.Description;
+            clon.getElementById("ROW").title=currdata.Description;
             clon.getElementById("COL2").innerHTML=currdata.Person;
 		    main_div.appendChild(clon);
         }
