@@ -1,25 +1,6 @@
 var JSON_data;
 var event_list;
 
-var event_styles = {
-    "CTEG Seminar": {
-        "bg":"#90A9B7",
-        "text":"white"
-    },
-    "PopGen JC":{
-        "bg":"#DDE8B9",
-        "text":"black"
-    },
-    "CCB Seminar":{
-        "bg":"#CB8589",
-        "text":"white"
-    },
-    "default":{
-        "bg":"#505168",
-        "text":"black"
-    }
-};
-
 
 function get_data_array(data){
     
@@ -69,7 +50,6 @@ function date_compare(r1,r2) {
             clon.getElementById("COL2").innerHTML=currdata.Presenter;
 
             event_date = new Date(labmeeting_array[i].Date);
-            event_date.setHours(22);
             
             if (i>0){
                 prev_event_date = new Date(labmeeting_array[i-1].Date);
