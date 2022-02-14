@@ -59,7 +59,7 @@ function date_compare(r1,r2) {
                 clon.getElementById("ROW").style.opacity="50%";
             }
 
-            if ((d > prev_event_date) && (d<event_date)){
+            if (((d > prev_event_date) && (d<event_date)) || (i==0 && event_date>d)){
                 clon.getElementById("ROW").style.color="white";
                 clon.getElementById("ROW").style.background="red";
                 clon.getElementById("ROW").style.opacity="50%";
@@ -82,89 +82,48 @@ function date_compare(r1,r2) {
 		    main_div.appendChild(clon);
         }
     }
+	
+    function draw_jc(jc_array){ 
 
-
-
-	function draw_events(events_array){ 
-		
-		let main_div = document.getElementById("events");
-		main_div.innerHTML=""; 
-		let row_div = document.createElement("div");
-		row_div.className="row";	
-		main_div.appendChild(row_div);
-		
-		for (let i = 0; i < events_array.length; i++){
-			
-			var temp = document.getElementById("event_template");
-            
+        let d = new Date();
+        let event_date = new Date(jc_array[0].Date);
+        let prev_event_date = new Date(jc_array[0].Date);
+        
+		let main_div = document.getElementById("journalclub");
+		for (let i = 0; i < jc_array.length; i++){
+			var temp = document.getElementById("journalclub_template");
 			var clon = temp.content.cloneNode(true);
-			let currdata = events_array[i];
-		    
-			let curr_div = clon.getElementById("CARDHEADER");
+			let currdata = jc_array[i];
+            clon.getElementById("COL1").innerHTML=currdata.Date;
+            clon.getElementById("COL2").innerHTML=currdata.Presenter;
+
+            event_date = new Date(jc_array[i].Date);
             
-            var bg_col = event_styles['default']['bg'];
-            var text_col = event_styles['default']['text'];
-
-            if (currdata.EVENT_TYPE in event_styles){
-                bg_col = event_styles[currdata.EVENT_TYPE]["bg"];
-                text_col = event_styles[currdata.EVENT_TYPE]["text"];
+            if (i>0){
+                prev_event_date = new Date(jc_array[i-1].Date);
             }
-            curr_div.style.backgroundColor = bg_col;
-            curr_div.style.color = text_col;
 
-			curr_div = clon.getElementById("EVENT");
-			curr_div.innerHTML=currdata.EVENT_TYPE;
-             
-			curr_div = clon.getElementById("DATE");
-			curr_div.innerHTML=currdata.DATE;
-			
-			curr_div = clon.getElementById("SPEAKER");
-			curr_div.innerHTML=currdata.SPEAKER;
-			
-			curr_div = clon.getElementById("TITLE");
-			curr_div.innerHTML=currdata.TITLE;
-		    
-            if (currdata.IMAGE_1){
-
-                curr_div = clon.getElementById("IMAGE");
-                let link = "https://drive.google.com/uc?id=" + currdata.IMAGE_1;
-                curr_div.src = link;
-
-                if (currdata.IMAGE_1 && currdata.IMAGE_2){
-                    curr_div = clon.getElementById("IMAGE_2");
-                    let link = "https://drive.google.com/uc?id=" + currdata.IMAGE_2;
-                    curr_div.src = link;
-                }else{
-                    curr_div = clon.getElementById("img_col1");
-                    curr_div.classList.remove("col-md-2");
-                    curr_div.classList.add("col-md-4");
-                    clon.getElementById("IMAGE_2").remove();
-                    clon.getElementById("img_col2").remove();
-                }
+            if (d > event_date){
+                clon.getElementById("ROW").style.opacity="50%";
             }
-            else{
-                curr_div = clon.getElementById("IMAGE");
-			    let link = "https://drive.google.com/uc?id=1KrxXeidcTDxfQzgLeR9czbLR7OVdvcr-";
-                curr_div.src = link;
+
+            if (((d > prev_event_date) && (d<event_date)) || (i==0 && event_date>d)){
+                clon.getElementById("ROW").style.color="white";
+                clon.getElementById("ROW").style.background="blue";
+                clon.getElementById("ROW").style.opacity="50%";
             }
-			
-			curr_div = clon.getElementById("abstract_ID");
-			curr_div.innerHTML=currdata.ABSTRACT;
-			curr_div.id = currdata.ID;
-			
-			curr_div = clon.getElementById("abstract_button");
-			let newid = "#" + currdata.ID;
-			curr_div.dataset.target = newid;
-			
-			row_div.appendChild(clon);
-			row_div.append(document.createElement("br"));
-		}
-		
-		$(function () {
-		  $('[data-toggle="popover"]').popover()
-		})
-	}
-    
+
+		    main_div.appendChild(clon);
+        }
+    }
+
+
+
+    $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/18L58hTSOKeZDO-8O2Bfdg-ZWmc9mQbMSh7KMzYtOzrI/values/JClub?key=AIzaSyCdZChtatuP0KOBYfHOtZiuHh4VVG3JyHs', function(data)   {
+        jclub_list = get_data_array(data);
+        draw_jc(jclub_list);
+    });
+
     $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/18L58hTSOKeZDO-8O2Bfdg-ZWmc9mQbMSh7KMzYtOzrI/values/LabMeeting?key=AIzaSyCdZChtatuP0KOBYfHOtZiuHh4VVG3JyHs', function(data)   {
         labmeeting_list = get_data_array(data);
         draw_labmeeting(labmeeting_list);
