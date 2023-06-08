@@ -85,6 +85,10 @@ body {
     object-position: center;
 }
 
+.scrolly {
+    height:600px;
+    overflow-y: scroll;
+}
 
 .newsrow {
     max-height: 200px;
