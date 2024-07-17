@@ -64,7 +64,7 @@ body {
 }
 
 .jumbo_labphoto{
-	background-image: url("resources/photos/2022/20220912_photo.jpeg");
+	background-image: url("resources/photos/2023/2023_lab_photo.JPG");
 	background-size: cover;
 	height: 750px;
 	object-position: center;
@@ -184,6 +184,12 @@ body {
     background-color: red;
     color: white;
     opacity: 0.5;
+}
+
+.alumnitxt {
+    margin: 0 0;
+    padding: 0 0 0 0;
+    line-height: 1;
 }
 
 #map {
